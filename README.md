@@ -23,3 +23,5 @@ docker run -v $(pwd):/var/simdata/openstudio nrel/openstudio:2.4.0 /usr/bin/open
 ```
 
 The command above will download the OpenStudio docker container from (Docker Hub)[https://hub.docker.com/r/nrel/openstudio/tags/], mount your local directory into the docker container, and call the OpenStudio CLI to run the basic_osw workflow.
+
+**Note**: If running on Windows 7 (or using Docker-Machine), then you will have to place the checkout of this repo into your home directory (e.g. C:\Users\<username>). This allows docker to mount the folder correctly since Docker-machine mounts the user's home directory into the Docker-machine VM.
