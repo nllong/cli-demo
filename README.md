@@ -15,13 +15,13 @@ Read more about [OpenStudio Measures](http://nrel.github.io/OpenStudio-user-docu
 
 ## Docker Container
 
-To run the demo within a Docker container first (install Docker)[https://www.docker.com/community-edition], then run the following command:
+To run the demo within a Docker container first [install Docker](https://www.docker.com/community-edition), then run the following command:
 
 ```
 cd cli-demo
 docker run -v $(pwd):/var/simdata/openstudio nrel/openstudio:2.4.0 /usr/bin/openstudio run -w basic_osw/in.osw
 ```
 
-The command above will download the OpenStudio docker container from (Docker Hub)[https://hub.docker.com/r/nrel/openstudio/tags/], mount your local directory into the docker container, and call the OpenStudio CLI to run the basic_osw workflow.
+The command above will download the OpenStudio docker container from [Docker Hub](https://hub.docker.com/r/nrel/openstudio/tags/), mount your local directory into the docker container, and call the OpenStudio CLI to run the basic_osw workflow.
 
 **Note**: If running on Windows 7 (or using Docker-Machine), then you will have to place the checkout of this repo into your home directory (e.g. C:\Users\<username>). This allows docker to mount the folder correctly since Docker-machine mounts the user's home directory into the Docker-machine VM.
