@@ -12,3 +12,4 @@ test:ubuntu:
     - bundle exec rake openstudio:style
     - bundle exec rake openstudio:dashboard
     - aws s3 cp ./test_results s3://openstudio-builds/dashboard/measures/ --recursive
+    - pwd
