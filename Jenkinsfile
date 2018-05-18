@@ -21,8 +21,24 @@ pipeline {
       }
     }
     stage('artifacts') {
-      steps {
-        archiveArtifacts '*'
+      parallel {
+        stage('artifacts') {
+          steps {
+            archiveArtifacts '*'
+          }
+        }
+        stage('asdf') {
+          steps {
+            timeout(time: 180, activity: true, unit: 'MINUTES') {
+              echo 'What is going on'
+              script {
+                rake -T
+              }
+
+            }
+
+          }
+        }
       }
     }
   }
