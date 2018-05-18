@@ -20,5 +20,10 @@ pipeline {
         input(message: 'are we done?', id: '5', ok: 'yes')
       }
     }
+    stage('artifacts') {
+      steps {
+        archiveArtifacts '*'
+      }
+    }
   }
 }
