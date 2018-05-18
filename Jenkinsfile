@@ -10,7 +10,7 @@ pipeline {
         }
         stage('run parallel') {
           steps {
-            error 'what the hell'
+            sh 'echo "what is next"'
           }
         }
       }
