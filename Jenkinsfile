@@ -10,7 +10,7 @@ pipeline {
         }
         stage('run parallel') {
           steps {
-            sh 'echo "what is next"'
+            sh 'echo "what is next  not this"'
           }
         }
       }
