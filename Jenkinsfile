@@ -15,5 +15,10 @@ pipeline {
         }
       }
     }
+    stage('lkj') {
+      steps {
+        input(message: 'are we done?', id: '5', ok: 'yes')
+      }
+    }
   }
 }
